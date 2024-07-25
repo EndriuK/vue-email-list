@@ -17,12 +17,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <button class="btn btn-sm btn-primary" @click="generateRandomEmail">Genera Email</button>
+                    <button class="btn btn-sm btn-primary" @click="generateTenRandomEmails">Genera Email</button>
                     <div>
-                        <strong>la tua mail è: </strong> {{email}}
+                        <strong>la tua mail è: </strong>
                     </div>
-                    <ul class="list-group">
-                        <li v-for="email in emails">{{email}}</li>
+                    <ul class="list-unstyled">
+                        <li v-for="email, index in emails">
+                            {{email}}
+                        </li>
                     </ul>
                 </div>
             </div>
